@@ -185,8 +185,8 @@ function conv(o,htmlbb){
 	}
 
 	function html_emot(r,gif,temp_o){
-		//i = tinymce.getParam("location_url", "http://examplesite.com");
-		i = "http://localhost:8000/static/tinymce/";
+		// May need to alter this variable
+		i = "/tinymce/";
 //				var string = '<img src="' + i + 'plugins/emoticons/img/' + gif + '">';
 		// for some reason, does not
 		var string = '<img alt="' + r + '" src="' + i + 'plugins/emoticons/img/' + gif  + '" />';
@@ -209,10 +209,10 @@ function conv(o,htmlbb){
 		return temp_o;
 	}
 
-	function bb_emot(e,gif,temp_o){
-		//i = tinymce.getParam("location_url", "http://examplesite.com");
+	function bb_emot(e,gif,temp_o){);
 		var rep_string = ":" + e + ":";
-		var i = "http://localhost:8000/static/tinymce/";
+		// may need to alter this
+		var i = "/tinymce/";
 		var img_string = '<img alt="' + e + '" src="' + i + 'plugins/emoticons/img/' + gif  + '" />';
 		var regthing = RegExp(rep_string,'gi');
 		temp_o = temp_o.replace(regthing,img_string);
